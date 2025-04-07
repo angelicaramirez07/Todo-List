@@ -38,7 +38,7 @@ const App = () => {
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => toggleTaskCompletion(item.id)}>
             <Text style={[styles.task, item.completed && styles.completedTask]}>
-              {item.text}
+              {`\u2022 ${item.text}`}
             </Text>
           </TouchableOpacity>
         )}
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: '#ccc',
     borderWidth: 1,
     marginBottom: 10,
     paddingHorizontal: 10,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   completedTask: {
     textDecorationLine: 'line-through',
-    color: 'gray',
+    color: '#ccc',
   },
 });
 
